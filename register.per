@@ -1,0 +1,24 @@
+LAYOUT (TEXT="Player Details")
+GRID
+{
+Login           [f01       ]
+Password        [f02       ]
+Confirm Password[f03       ]
+[""]
+Firstname       [f04                                   ]
+Surname         [f05                                   ]
+Email           [f06                                   ]
+[b01                                                   ]
+
+}
+END
+ATTRIBUTES
+f01 = formonly.login;
+f02 = formonly.password, INVISIBLE;
+f03 = formonly.password2, INVISIBLE;
+
+f04 = formonly.firstname;
+f05 = formonly.surname;
+f06 = formonly.EMAIL;
+
+BUTTON b01: accept;

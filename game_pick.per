@@ -1,0 +1,33 @@
+LAYOUT (TEXT="Game Picks")
+VBOX
+GRID
+{
+[f01                |f02|" "|f03                |f04]
+[" "]
+[f05                                                ]
+[f06                                                ]       
+
+}
+END
+TABLE (HEIGHT=10 LINES)
+{
+[c01       ][c02                ][c03                 ][c04]
+}
+END
+END
+END
+ATTRIBUTES
+LABEL f01 = formonly.team1;
+LABEL f02 = formonly.score1;
+LABEL f03 = formonly.team2;
+LABEL f04 = formonly.score2;
+LABEL f05 = formonly.venue, JUSTIFY=CENTER;
+LABEL f06 = formonly.kickoff, JUSTIFY=CENTER;
+
+LABEL c01 = formonly.login, TITLE="Login";
+LABEL c02 = formonly.name, TITLE="Name";
+COMBOBOX c03 = formonly.pick, TITLE="Pick";
+IMAGE c04 = formonly.point, TITLE="Result";
+INSTRUCTIONS
+SCREEN RECORD game_pick_scr(login, name, pick, point);
+

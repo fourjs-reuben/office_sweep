@@ -1,0 +1,36 @@
+<StyleList>
+  <Style name="Window">
+     <StyleAttribute name="windowType" value="normal" />
+     <StyleAttribute name="actionPanelPosition" value="top" />
+     <StyleAttribute name="ringMenuPosition" value="top" />
+  </Style>
+
+  <Style name="Window.dialog">
+     <StyleAttribute name="windowType" value="modal" />
+     <StyleAttribute name="sizable" value="no" />
+     <StyleAttribute name="position" value="center" />
+     <StyleAttribute name="actionPanelPosition" value="bottom" />
+     <StyleAttribute name="ringMenuPosition" value="bottom" />
+     <StyleAttribute name="toolBarPosition" value="none" />
+     <StyleAttribute name="statusBarType" value="none" />
+  </Style>
+  
+    <Style name="Image.empty">
+     <StyleAttribute name="border" value="none" />
+   </Style>
+
+   <Style name="TextEdit.html">
+     <StyleAttribute name="textFormat" value="html" />
+   </Style>
+
+   <Style name="Button.link">
+     <StyleAttribute name="buttonType" value="link" />
+   </Style>
+
+   <Style name="Table">
+     <StyleAttribute name="headerAlignment" value="auto" />
+   </Style>
+    <Style name="Table:even">
+     <StyleAttribute name="backgroundColor" value="systemAlternateBackground" />
+   </Style>
+</StyleList>

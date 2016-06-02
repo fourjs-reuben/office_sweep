@@ -1,0 +1,16 @@
+LAYOUT (TEXT="Game Administration")
+GRID
+{
+Game [f01                ][f02][f03][b01      ][b02     ]
+[""]      
+[b03                                                    ]
+}
+END
+END
+ATTRIBUTES
+COMBOBOX f01 = formonly.gm_id, INITIALIZER = combo_gameselect;
+f02 = formonly.score1;
+f03 = formonly.score2;
+BUTTON b01: update_game_score;
+BUTTON b02: delete_game_score;
+BUTTON b03: update_leaderboard;

@@ -1,0 +1,28 @@
+<ActionDefaultList>
+
+  
+  <ActionDefault name="accept"    text="Submit" image = "accept" acceleratorName="Return" />
+  <ActionDefault name="cancel"    text="Back"   image = "cancel" acceleratorName="Escape" />
+  <ActionDefault name="close"    defaultView="no" acceleratorName="Alt-F4" />
+
+  <ActionDefault name="login"    text="Login"  image="fa-sign-in" comment="Login and play"  />
+  <ActionDefault name="logoff"    text="Logoff" image="fa-sign-out" comment="Logoff"   />
+  <ActionDefault name="register"    text="Register"  image="fa-user-plus" comment="Register to play"   />
+  <ActionDefault name="update"    text="Update" image="fa-user" comment="Update your personal details"   />
+
+  <ActionDefault name="rules"    text="Rules" image="fa-legal"  comment="Read the rules"   />
+  <ActionDefault name="pick"    text="Pick" image="fa-soccer-ball-o"  comment="Make your selections"  />
+  <ActionDefault name="leaderboard"    text="Leaderboard" image="fa-list-ol" comment="View the leaderboard"  />
+  <ActionDefault name="result"    text="Results" image="fa-dashboard" comment="View your results"  />
+
+  <ActionDefault name="admin"    text="Admin" image="" comment="Administrator Tasks"  />
+
+  <ActionDefault name="player_pick" text="Player Picks" image="" comment="View other players picks" />
+  <ActionDefault name="game_pick" text="Game Picks" image="fa-soccer-ball-o" comment="View picks for a game" />
+
+  <ActionDefault name="update_game_score"    text="Update Game Score"     comment="Update the score in a game"   />
+  <ActionDefault name="delete_game_score"    text="Delete Game Score"     comment="Delete the score in a game"   />
+  <ActionDefault name="update_leaderboard"   text="Update Leaderboard"   comment="Update the leaderboard"  />
+  
+  
+</ActionDefaultList>

@@ -1,0 +1,29 @@
+LAYOUT (TEXT="Player Picks")
+VBOX
+GRID
+{
+Login     [f01       ]
+Name      [f02                          ]
+}
+END
+TABLE (HEIGHT=10 LINES)
+{
+[c01                ][c02        ][c03                 ][c04                 ][c05                ]
+}
+END
+END
+END
+
+ATTRIBUTES
+LABEL f01 = formonly.login;
+LABEL f02 = formonly.name;
+
+PHANTOM formonly.game;
+LABEL c01 = formonly.team1, TITLE="Team 1";
+COMBOBOX c02 = formonly.pick, INITIALIZER=combo_pick, TITLE="Pick";
+LABEL c03 = formonly.team2, TITLE="Team 2";
+LABEL c04 = formonly.venue, TITLE="Venue";
+LABEL c05 = formonly.kickoff, TITLE="Kickoff";
+
+INSTRUCTIONS
+SCREEN RECORD player_pick_scr(game, team1, pick, team2, venue, kickoff)

@@ -1,0 +1,2 @@
+dbi.database.sweep.source = "sweep.db"
+dbi.database.sweep.driver = "dbmsqt"

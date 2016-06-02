@@ -1,0 +1,22 @@
+LAYOUT (TEXT="Results")
+VBOX
+TABLE (HEIGHT=16 LINES, WANTFIXEDPAGESIZE)
+{
+[f01                      ][f02       ][f03                      ][f04][f05][f06]
+
+}
+END
+END
+ATTRIBUTES
+PHANTOM formonly.game;
+
+COMBOBOX f01 = formonly.team1, INITIALIZER=combo_team, STYLE="combo_team", NOENTRY, TITLE="Country";
+
+COMBOBOX f02 = formonly.pick, INITIALIZER=combo_pick, STYLE="combo_pick", TITLE="Pick";
+COMBOBOX f03 = formonly.team2, INITIALIZER=combo_team, STYLE="combo_team", NOENTRY, TITLE="Country";
+EDIT f04 = formonly.score1, TITLE="Score";
+EDIT f05 = formonly.score2, TITLE="Score";
+IMAGE f06 = formonly.result;
+
+INSTRUCTIONS
+SCREEN RECORD result_scr(game, team1, pick, team2, score1, score2, result);
