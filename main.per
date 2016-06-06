@@ -1,20 +1,23 @@
 LAYOUT (TEXT="Office Sweepstake", IMAGE="logo")
 VBOX
-GRID
-{
-[f01                                                     ]
-}
-END
-
 GROUP (TEXT="Message of the Day")
 GRID
 {
- [f02                                                   ]
- [                                                      ]
- [                                                      ]
- [                                                      ]
- [                                                      ]
- [                                                      ]
+[f02                                                   ]
+[                                                      ]
+}
+END
+END
+
+GROUP (TEXT="Image of the Day")
+GRID
+{
+[f03                                                   ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
 }
 END
 END
@@ -23,8 +26,8 @@ END
 
 ATTRIBUTES
 
-
-
-LABEL f01 = formonly.name;
 TEXTEDIT f02 = formonly.motd, STRETCH=BOTH, STYLE="html";
+IMAGE f03 = formonly.iotd, AUTOSCALE, STRETCH=BOTH;
+
+ 
 

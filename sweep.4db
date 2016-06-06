@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Schema gstVersion="3001c" id="{15e6ec9c-b22c-4217-a217-b98516aa426b}" version="3.0">
+  <AGSettings version="1.1">
+    <DynamicProperties version="2">
+      <DynamicProperty description="Associated label when generating form" initialValue="" isDefaultInherited="false" isHidden="false" label="Label" name="label" readOnly="false" type="TEXT"/>
+      <DynamicProperty description="Associated widget" editorInfo="contains:ButtonEdit|CheckBox|ComboBox|DateEdit|DateTimeEdit|Edit|FFImage|FFLabel|Field|Phantom|ProgressBar|RadioGroup|Slider|SpinEdit|TextEdit|TimeEdit" initialValue="Edit" isDefaultInherited="false" isHidden="false" label="Widget" name="widget" readOnly="false" type="ENUM"/>
+      <DynamicPropertyGroup collapsed="false" description="Formfied properties" label="Formfield" name="formfieldGroup" properties="label;widget"/>
+    </DynamicProperties>
+    <NodeInfos version="1">
+      <NodeInfo mimeType="db/column" properties="widget;label"/>
+    </NodeInfos>
+  </AGSettings>
+  <ExtractionSettings>
+    <ExtractionOptions casens="LowerCase" cvmeth="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ignerr="true" systab="false" type="SQLite"/>
+  </ExtractionSettings>
+  <Table active="true" name="game" status="U" uuid="db/table1">
+    <Column fglLength="4" fglType="2" name="gm_id" notNull="false" order="1" status="U" uuid="db/column1"/>
+    <Column fglLength="4" fglType="2" name="gm_gametype" notNull="false" order="2" status="U" uuid="db/column2"/>
+    <Column fglLength="4" fglType="2" name="gm_venue" notNull="false" order="3" status="U" uuid="db/column3"/>
+    <Column fglLength="4" fglType="2" name="gm_team1" notNull="false" order="4" status="U" uuid="db/column4"/>
+    <Column fglLength="4" fglType="2" name="gm_team2" notNull="false" order="5" status="U" uuid="db/column5"/>
+    <Column fglLength="3080" fglType="10" name="gm_kickoff" notNull="false" order="6" status="U" uuid="db/column6"/>
+    <Column fglLength="4" fglType="2" name="gm_score1" notNull="false" order="7" status="U" uuid="db/column7"/>
+    <Column fglLength="4" fglType="2" name="gm_score2" notNull="false" order="8" status="U" uuid="db/column8"/>
+    <Column fglLength="4" fglType="2" name="gm_result" notNull="false" order="9" status="U" uuid="db/column9"/>
+  </Table>
+  <Table active="true" name="gametype" status="U" uuid="db/table2">
+    <Column fglLength="4" fglType="2" name="gt_id" notNull="false" order="1" status="U" uuid="db/column10"/>
+    <Column fglLength="30" fglType="0" name="gt_name" notNull="false" order="2" status="U" uuid="db/column11"/>
+    <Column fglLength="4" fglType="2" name="gt_value" notNull="false" order="3" status="U" uuid="db/column12"/>
+    <Column fglLength="2" fglType="1" name="gt_drawallowed" notNull="false" order="4" status="U" uuid="db/column13"/>
+  </Table>
+  <Table active="true" name="league" status="U" uuid="db/table3">
+    <Column fglLength="4" fglType="2" name="lg_id" notNull="false" order="1" status="U" uuid="db/column14"/>
+    <Column fglLength="40" fglType="201" name="lg_name" notNull="false" order="2" status="U" uuid="db/column15"/>
+    <Column fglLength="10" fglType="0" name="lg_admin_login" notNull="false" order="3" status="U" uuid="db/column16"/>
+  </Table>
+  <Table active="true" name="league_member" status="U" uuid="db/table4">
+    <Column fglLength="4" fglType="2" name="lm_league" notNull="false" order="1" status="U" uuid="db/column17"/>
+    <Column fglLength="10" fglType="0" name="lm_login" notNull="false" order="2" status="U" uuid="db/column18"/>
+    <Column fglLength="4" fglType="2" name="lm_score" notNull="false" order="3" status="U" uuid="db/column19"/>
+    <Column fglLength="4" fglType="2" name="lm_rank" notNull="false" order="4" status="U" uuid="db/column20"/>
+  </Table>
+  <Table active="true" name="pick" status="U" uuid="db/table5">
+    <Column fglLength="10" fglType="0" name="pk_login" notNull="false" order="1" status="U" uuid="db/column21"/>
+    <Column fglLength="4" fglType="2" name="pk_game" notNull="false" order="2" status="U" uuid="db/column22"/>
+    <Column fglLength="4" fglType="2" name="pk_pick" notNull="false" order="3" status="U" uuid="db/column23"/>
+    <Column fglLength="4" fglType="2" name="pk_point" notNull="false" order="4" status="U" uuid="db/column24"/>
+  </Table>
+  <Table active="true" name="pick_audit" status="U" uuid="db/table6">
+    <Column fglLength="10" fglType="0" name="pa_login" notNull="false" order="1" status="U" uuid="db/column25"/>
+    <Column fglLength="4" fglType="2" name="pa_game" notNull="false" order="2" status="U" uuid="db/column26"/>
+    <Column fglLength="4" fglType="2" name="pa_pick" notNull="false" order="3" status="U" uuid="db/column27"/>
+    <Column fglLength="3594" fglType="10" name="pa_when" notNull="false" order="4" status="U" uuid="db/column28"/>
+  </Table>
+  <Table active="true" name="player" status="U" uuid="db/table7">
+    <Column fglLength="10" fglType="0" name="pl_login" notNull="false" order="1" status="U" uuid="db/column29"/>
+    <Column fglLength="128" fglType="201" name="pl_password" notNull="false" order="2" status="U" uuid="db/column30"/>
+    <Column fglLength="40" fglType="201" name="pl_firstname" notNull="false" order="3" status="U" uuid="db/column31"/>
+    <Column fglLength="40" fglType="201" name="pl_surname" notNull="false" order="4" status="U" uuid="db/column32"/>
+    <Column fglLength="40" fglType="0" name="pl_email" notNull="false" order="5" status="U" uuid="db/column33"/>
+    <Column fglLength="10" fglType="0" name="pl_invitor" notNull="false" order="6" status="U" uuid="db/column34"/>
+    <Column fglLength="3" fglType="0" name="pl_country" notNull="false" order="7" status="U" uuid="db/column35"/>
+    <Column fglLength="4" fglType="2" name="pl_score" notNull="false" order="8" status="U" uuid="db/column36"/>
+    <Column fglLength="64" fglType="0" name="pl_tiebreak" notNull="false" order="9" status="U" uuid="db/column37"/>
+    <Column fglLength="4" fglType="2" name="pl_rank" notNull="false" order="10" status="U" uuid="db/column38"/>
+  </Table>
+  <Table active="true" name="team" status="U" uuid="db/table8">
+    <Column fglLength="4" fglType="2" name="tm_id" notNull="false" order="1" status="U" uuid="db/column39"/>
+    <Column fglLength="40" fglType="201" name="tm_name" notNull="false" order="2" status="U" uuid="db/column40"/>
+    <Column fglLength="7" fglType="0" name="tm_colour1" notNull="false" order="3" status="U" uuid="db/column41"/>
+    <Column fglLength="7" fglType="0" name="tm_colour2" notNull="false" order="4" status="U" uuid="db/column42"/>
+  </Table>
+  <Table active="true" name="venue" status="U" uuid="db/table9">
+    <Column fglLength="4" fglType="2" name="vn_id" notNull="false" order="1" status="U" uuid="db/column43"/>
+    <Column fglLength="40" fglType="201" name="vn_city" notNull="false" order="2" status="U" uuid="db/column44"/>
+    <Column fglLength="40" fglType="201" name="vn_stadium" notNull="false" order="3" status="U" uuid="db/column45"/>
+  </Table>
+  <ForeignKey cascadeDelete="false" fkColumns="lm_league" fkRefColumns="lg_id" name="FK_league_member_league_1" refTable="league" status="A" table="league_member" uuid="db/foreignkey2"/>
+  <ForeignKey cascadeDelete="false" fkColumns="gm_gametype" fkRefColumns="gt_id" name="FK_game_gametype_1" refTable="gametype" status="A" table="game" uuid="db/foreignkey4"/>
+  <ForeignKey cascadeDelete="false" fkColumns="pk_login" fkRefColumns="pl_login" name="FK_pick_player_1" refTable="player" status="A" table="pick" uuid="db/foreignkey6"/>
+  <ForeignKey cascadeDelete="false" fkColumns="gm_team1" fkRefColumns="tm_id" name="FK_game_team_1" refTable="team" status="A" table="game" uuid="db/foreignkey8"/>
+  <ForeignKey cascadeDelete="false" fkColumns="gm_team2" fkRefColumns="tm_id" name="FK_game_team_2" refTable="team" status="A" table="game" uuid="db/foreignkey10"/>
+  <ForeignKey cascadeDelete="false" fkColumns="gm_venue" fkRefColumns="vn_id" name="FK_game_venue_1" refTable="venue" status="A" table="game" uuid="db/foreignkey12"/>
+  <ForeignKey cascadeDelete="false" fkColumns="pk_game" fkRefColumns="gm_id" name="FK_pick_game_1" refTable="game" status="A" table="pick" uuid="db/foreignkey14"/>
+  <ForeignKey cascadeDelete="false" fkColumns="pa_login" fkRefColumns="pl_login" name="FK_pick_audit_player_1" refTable="player" status="A" table="pick_audit" uuid="db/foreignkey16"/>
+  <ForeignKey cascadeDelete="false" fkColumns="pa_game" fkRefColumns="gm_id" name="FK_pick_audit_game_1" refTable="game" status="A" table="pick_audit" uuid="db/foreignkey18"/>
+  <Views ActiveView="View-1" showLabels="true">
+    <View Name="View-1">
+      <Layout>
+        <![CDATA[AAAAAgAAABIAZABiAC8AdABhAGIAbABlADFAd5IiFVVVVkCIiD2AAAABP7hR64UeuFcBAAAAEgBkAGIALwB0AGEAYgBsAGUAMkAkpqqqqqoAQIJagbqqqqs/tocrAgxJvwEAAAASAGQAYgAvAHQAYQBiAGwAZQAzQJD/oaAAAABANIAAAAAAAD+k/fO2RaHPAQAAABIAZABiAC8AdABhAGIAbABlADRAlbCdoAAAAEBJzhSAAAAAP6eNT987ZF8BAAAAEgBkAGIALwB0AGEAYgBsAGUANUCLlggAAAAAQIbu7tVVVVU/v3ztkWhytwEAAAASAGQAYgAvAHQAYQBiAGwAZQA2QIq+9SAAAABAkUMvyqqqqz/BJul41P33AQAAABIAZABiAC8AdABhAGIAbABlADdAkxv0ZVVVVUCICO71VVVVP8BBiTdLxqsBAAAAEgBkAGIALwB0AGEAYgBsAGUAOEB8mj6////8QH8bktVVVVY/wcrAgxJumwEAAAASAGQAYgAvAHQAYQBiAGwAZQA5QDPf7AAAAABAjiZmgAAAAD+ibpeNT98/AQ==]]>
+      </Layout>
+    </View>
+  </Views>
+</Schema>

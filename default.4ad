@@ -15,7 +15,7 @@
   <ActionDefault name="leaderboard"    text="Leaderboard" image="fa-list-ol" comment="View the leaderboard"  />
   <ActionDefault name="result"    text="Results" image="fa-dashboard" comment="View your results"  />
 
-  <ActionDefault name="admin"    text="Admin" image="" comment="Administrator Tasks"  />
+  <ActionDefault name="admin"    text="Admin" image="fa-cog" comment="Administrator Tasks"  />
 
   <ActionDefault name="player_pick" text="Player Picks" image="" comment="View other players picks" />
   <ActionDefault name="game_pick" text="Game Picks" image="fa-soccer-ball-o" comment="View picks for a game" />

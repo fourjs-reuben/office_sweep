@@ -48,7 +48,8 @@ FUNCTION create_tables()
         tm_id INTEGER,
         tm_name VARCHAR(40),
         tm_colour1 CHAR(7),
-        tm_colour2 CHAR(7));
+        tm_colour2 CHAR(7),
+        tm_colour3 CHAR(7));
 
     CREATE TABLE venue (
         vn_id INTEGER,
@@ -115,6 +116,8 @@ END FUNCTION
 FUNCTION populate_player()
     DELETE FROM player WHERE 1=1
     -- Replace with your details
+    --INSERT INTO player VALUES("admin","admin","Admin","User","fourjs.reuben@gmail.com",NULL,NULL,NULL,NULL,NULL);
+    --INSERT INTO player VALUES("admin","admin","Admin","User","fourjs.reuben@gmail.com",NULL,NULL,NULL,NULL,NULL);
     --INSERT INTO player VALUES("admin","admin","Admin","User","fourjs.reuben@gmail.com",NULL,NULL,NULL,NULL,NULL);
 END FUNCTION
 

@@ -1,0 +1,29 @@
+LAYOUT (TEXT="Pick")
+VBOX
+TABLE (HEIGHT=16 LINES, WANTFIXEDPAGESIZE)
+{
+[f01                      ][f02       ][f03                      ][f04                            ][f05               ][f06                            ]
+
+}
+END
+GRID
+{
+[""]
+}
+END
+END
+END
+ATTRIBUTES
+PHANTOM formonly.game;
+
+COMBOBOX f01 = formonly.team1, INITIALIZER=combo_team, STYLE="combo_team", NOENTRY, TITLE="Country";
+
+COMBOBOX f02 = formonly.pick, INITIALIZER=combo_pick, STYLE="combo_pick", TITLE="Pick";
+COMBOBOX f03 = formonly.team2, INITIALIZER=combo_team, STYLE="combo_team", NOENTRY, TITLE="Country";
+COMBOBOX f04 = formonly.venue, INITIALIZER=combo_venue, STYLE="combo_venue", NOENTRY, TITLE="Venue";
+LABEL f05 = formonly.kickoff, TITLE="Kickoff";
+COMBOBOX f06 = formonly.gametype, INITIALIZER=combo_gametype, STYLE="combo_gametype", NOENTRY, TITLE="Stage";
+
+
+INSTRUCTIONS 
+SCREEN RECORD pick_scr(game, team1, pick, team2, venue, kickoff, gametype);                    

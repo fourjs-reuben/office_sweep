@@ -54,8 +54,12 @@
   <LanguageList version="1.0"/>
   <PlatformList version="1.0"/>
   <Group environment="value:FGLPROFILE=fglprofile_office_sweep" label="office_sweep" language="Genero" targetDirectory="$(ProjectDir)">
-    <Application binaryName="office_sweep" environment="value:FGLSQLDEBUG=99" id="18736" label="office_sweep">
+    <Application binaryName="office_sweep" environment="value:SWEEP_NOW_2=2016-06-20 20:00||value:SWEEP_LOGIN_2=admin" id="18736" label="office_sweep">
+      <VirtualFolder label="_readme">
+        <File filePath="readme.txt"/>
+      </VirtualFolder>
       <VirtualFolder label="daily_files">
+        <File filePath="iotd.JPG"/>
         <File filePath="motd.txt"/>
         <File filePath="rules.txt"/>
       </VirtualFolder>
@@ -66,22 +70,29 @@
         <File filePath="login.per"/>
         <File filePath="main.per"/>
         <File filePath="pick.per"/>
+        <File filePath="pick_old.per"/>
         <File filePath="player_pick.per"/>
         <File filePath="register.per"/>
         <File filePath="result.per"/>
         <File filePath="rules.per"/>
+      </VirtualFolder>
+      <VirtualFolder label="lib">
+        <File filePath="combo.4gl"/>
+        <File filePath="global.4gl"/>
+        <File filePath="lib.4gl"/>
       </VirtualFolder>
       <VirtualFolder label="resources">
         <File filePath="default.4ad"/>
         <File filePath="default.4st"/>
         <File filePath="fglprofile_office_sweep"/>
       </VirtualFolder>
+      <VirtualFolder label="webcomponents">
+        <File excludeFromLink="true" filePath="wc_2darray.4gl"/>
+        <File filePath="webcomponents/wc_2darray/wc_2darray.html"/>
+      </VirtualFolder>
       <File filePath="admin.4gl"/>
-      <File filePath="combo.4gl"/>
       <File filePath="game_pick.4gl"/>
-      <File filePath="global.4gl"/>
       <File filePath="leaderboard.4gl"/>
-      <File filePath="lib.4gl"/>
       <File filePath="login.4gl"/>
       <File filePath="main.4gl"/>
       <File filePath="pick.4gl"/>
@@ -89,6 +100,7 @@
       <File filePath="register.4gl"/>
       <File filePath="result.4gl"/>
       <File filePath="rules.4gl"/>
+      <File filePath="sweep.4db"/>
     </Application>
     <Application binaryName="office_sweep_database_create" environment="value:FGLSQLDEBUG=99" id="-1954437564" label="office_sweep_database_create">
       <File filePath="create_database.4gl"/>

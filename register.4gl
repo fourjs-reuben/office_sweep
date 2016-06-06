@@ -15,10 +15,13 @@ DEFINE count INTEGER
    IF new_mode THEN
       INITIALIZE login, password, password2, firstname, surname, email TO NULL
    ELSE
-      SELECT pl_password, pl_password, pl_firstname, pl_surname, pl_email
-      INTO password, password2, firstname, surname, email
+      SELECT pl_password, pl_firstname, pl_surname, pl_email
+      INTO encrypted_password, firstname, surname, email
       FROM player
       WHERE pl_login = login
+
+      LET password = decrypt_password(encrypted_password CLIPPED)
+      LET password2= password
    END IF
 
    DIALOG ATTRIBUTES(UNBUFFERED)
