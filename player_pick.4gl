@@ -3,7 +3,7 @@ game INTEGER,
 team1 CHAR(20),
 pick INTEGER,
 team2 CHAR(20),
-venue CHAR(40),
+venue STRING,
 kickoff DATETIME YEAR TO MINUTE
 END RECORD
 
@@ -38,7 +38,7 @@ DEFINE player_pick_arr DYNAMIC ARRAY OF player_pick_rowType
              "FROM pick, game ",
              "LEFT OUTER JOIN team as t1 ON t1.tm_id = game.gm_team1 ",
              "LEFT OUTER JOIN team as t2 ON t2.tm_id = game.gm_team2 ", 
-             "LEFT OUTER JOIN venue ON venue.vn_id = game.gm_id ",
+             "LEFT OUTER JOIN venue ON venue.vn_id = game.gm_venue ",
              "WHERE pick.pk_login = ? ",
              "AND pk_game = gm_id ",
              "ORDER BY gm_id "
