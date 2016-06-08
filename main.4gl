@@ -14,6 +14,7 @@ DEFINE w ui.Window
     OPTIONS INPUT WRAP
 
     CONNECT TO "sweep"
+    SET LOCK MODE TO WAIT 30
     CLOSE WINDOW SCREEN
    
     OPEN WINDOW sweep WITH FORM "main"
