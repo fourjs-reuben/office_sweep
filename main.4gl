@@ -1,8 +1,9 @@
 IMPORT os
+IMPORT util
 GLOBALS "global.4gl"
 
-
-
+DEFINE iotd_arr DYNAMIC ARRAY OF STRING
+DEFINE last_iotd INTEGER
 
 MAIN
 DEFINE w ui.Window
@@ -25,6 +26,7 @@ DEFINE w ui.Window
     END IF 
 
     -- Message and image of the day
+    CALL init_iotd()
     CALL do_motd()
     CALL do_iotd()
   
@@ -57,6 +59,9 @@ DEFINE w ui.Window
 
         ON ACTION update
             CALL do_register(FALSE)
+
+        ON ACTION iotd
+            CALL do_iotd()
 
         ON ACTION logoff
             INITIALIZE login TO NULL
@@ -116,7 +121,49 @@ DEFINE motd TEXT
 END FUNCTION
 
 -- iotd = Image of The Day
-FUNCTION do_iotd()
 
-    DISPLAY "iotd.jpg" TO iotd
+
+FUNCTION init_iotd()
+DEFINE hdl INTEGER
+DEFINE l_filename STRING
+DEFINE l_ext STRING
+
+    CALL iotd_arr.clear()
+    LET hdl = os.Path.dirOpen("iotd")
+    WHILE TRUE
+        LET l_filename = os.Path.dirNext(hdl)
+        IF l_filename IS  NULL THEN
+            EXIT WHILE
+        END IF
+        LET l_ext = os.Path.extension(l_filename)
+        LET l_ext = l_ext.toLowerCase()
+        IF l_ext = "png" 
+        OR l_ext = "jpg" THEN
+            LET iotd_arr[iotd_arr.getLength()+1] = l_filename
+        END IF
+    END WHILE
+END FUNCTION
+
+
+
+FUNCTION do_iotd()
+DEFINE i INTEGER
+
+    IF iotd_arr.getLength() = 0 THEN
+        DISPLAY "fa-photo" TO iotd
+    ELSE
+        
+        WHILE TRUE
+            LET i = util.Math.rand(iotd_arr.getLength())+1
+            -- Avoid last iotd
+            IF iotd_arr.getLength() > = 2 THEN
+                IF i = last_iotd THEN
+                    CONTINUE WHILE
+                END IF
+            END IF
+            EXIT WHILE
+        END WHILE
+        DISPLAY SFMT("iotd/%1",iotd_arr[i]) TO iotd
+        LET last_iotd = i
+    END IF
 END FUNCTION
