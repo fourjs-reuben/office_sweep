@@ -10,7 +10,7 @@ DEFINE now DATETIME YEAR TO MINUTE
         LET now = FGL_GETENV("SWEEP_NOW")
     ELSE
         LET now = CURRENT YEAR TO MINUTE
-        LET now = util.Datetime.toUTC(now)
+        #LET now = util.Datetime.toUTC(now)  -- Not needed if gametime data and server on same TZ, assuming times in database on the same TZ
     END IF
     RETURN now
 END FUNCTION
