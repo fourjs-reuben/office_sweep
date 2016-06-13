@@ -21,7 +21,7 @@ DEFINE w ui.Window
     LET w = ui.Window.getCurrent()
 
     -- For testing purposes, if env variable set, use that for login
-    IF NOT is_blank(FGL_GETENV("SWEEP_LOGIN")) >0 THEN
+    IF NOT is_blank(FGL_GETENV("SWEEP_LOGIN"))  THEN
         LET login = FGL_GETENV("SWEEP_LOGIN")
         CALL w.setText(SFMT("Office Sweep - Logged in as %1",get_name()))
     END IF 

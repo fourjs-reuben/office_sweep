@@ -63,7 +63,7 @@ DEFINE click_y INTEGER
     CALL wc_2darray.col_set(1, "")
     CALL wc_2darray.col_set(2, "")
     CALL wc_2darray.col_set(3, "")
-    CALL wc_2darray.col_set(4, "Picks")
+    CALL wc_2darray.col_set(4, "View Picks")
     CALL wc_2darray.col_set(5, "Points")
     CALL wc_2darray.col_set(6, "Kick-off")
     CALL wc_2darray.col_set(7, "Venue")
@@ -71,8 +71,8 @@ DEFINE click_y INTEGER
     CALL wc_2darray.col_style_set(1,"width: 20%")
     CALL wc_2darray.col_style_set(2,"width: 20%")
     CALL wc_2darray.col_style_set(3,"width: 20%")
-    CALL wc_2darray.col_style_set(4,"width: 6%")
-    CALL wc_2darray.col_style_set(5,"width: 6%")
+    CALL wc_2darray.col_style_set(4,"width: 7%")
+    CALL wc_2darray.col_style_set(5,"width: 5%")
     CALL wc_2darray.col_style_set(6,"width: 14%")
     CALL wc_2darray.col_style_set(7,"width: 14%")
 
@@ -88,7 +88,7 @@ DEFINE click_y INTEGER
             CALL wc_2darray.cell_set(2,i,"versus")
         END IF
         CALL wc_2darray.cell_set(3,i,pick_rec.tm2_name)
-        CALL wc_2darray.cell_set(4,i,"Picks") -- replace with img
+        CALL wc_2darray.cell_set(4,i,'<i class="fa fa-soccer-ball-o"></i>') 
         CALL wc_2darray.cell_set(5,i,pick_rec.gt_value)
         CALL wc_2darray.cell_set(6,i,pick_rec.kickoff)
         CALL wc_2darray.cell_set(7,i,SFMT("%1 (%2)", pick_rec.vn_stadium, pick_rec.vn_city))
@@ -134,7 +134,8 @@ DEFINE click_y INTEGER
                         NEXT FIELD CURRENT
                     END IF
                     
-                    CALL update_pick(click_y, 2-click_x)
+                    #CALL update_pick(click_y, 2-click_x)
+                    CALL update_pick(pick_arr[click_y].game, 2-click_x)
                     CALL wc_2darray.cell_class_set(1,click_y,IIF(click_x=1,"picked","not_picked"))
                     CALL wc_2darray.cell_class_set(2,click_y,IIF(click_x=2,"picked","not_picked"))
                     CALL wc_2darray.cell_class_set(3,click_y,IIF(click_x=3,"picked","not_picked"))

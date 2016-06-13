@@ -54,12 +54,11 @@
   <LanguageList version="1.0"/>
   <PlatformList version="1.0"/>
   <Group environment="value:FGLPROFILE=fglprofile_office_sweep" label="office_sweep" language="Genero" targetDirectory="$(ProjectDir)">
-    <Application binaryName="office_sweep" environment="value:SWEEP_NOW_2=2016-06-20 20:00||value:SWEEP_LOGIN_2=admin" id="18736" label="office_sweep">
+    <Application binaryName="office_sweep" environment="value:SWEEP_NOW_2=2016-06-20 20:00||value:SWEEP_LOGIN=admin" id="18736" label="office_sweep">
       <VirtualFolder label="_readme">
         <File filePath="readme.txt"/>
       </VirtualFolder>
       <VirtualFolder label="daily_files">
-        <File filePath="iotd.JPG"/>
         <File filePath="motd.txt"/>
         <File filePath="rules.txt"/>
       </VirtualFolder>
